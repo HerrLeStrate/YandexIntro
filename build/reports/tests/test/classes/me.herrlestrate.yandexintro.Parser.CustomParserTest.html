@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.185s</div>
+<div class="counter">0.183s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,12 +79,12 @@
 </thead>
 <tr>
 <td class="success">parseTo_FileNotFound</td>
-<td class="success">0.125s</td>
+<td class="success">0.134s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">parseTo_Success</td>
-<td class="success">0.060s</td>
+<td class="success">0.049s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -92,29 +92,42 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>19-05-30 23:57:05:008  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input1.txt
-19-05-30 23:57:05:028 ERROR Test worker Parser.CustomParser:78 - key.value exists and not JSONObject!
-19-05-30 23:57:05:028  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input2.txt
-19-05-30 23:57:05:030 ERROR Test worker Parser.CustomParser:197 - String not contains '='!
-19-05-30 23:57:05:031 ERROR Test worker Parser.CustomParser:39 - String key.badkey not valid!
-19-05-30 23:57:05:031  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input3.txt
-19-05-30 23:57:05:033 ERROR Test worker Parser.CustomParser:202 - String contains more than 1 symbol '='!
-19-05-30 23:57:05:033 ERROR Test worker Parser.CustomParser:39 - String key=1=2=3 not valid!
-19-05-30 23:57:05:035  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input4.txt
-19-05-30 23:57:05:036 ERROR Test worker Parser.CustomParser:207 - String contains &quot;..&quot;!
-19-05-30 23:57:05:036 ERROR Test worker Parser.CustomParser:39 - String key..subkey2=5 not valid!
-19-05-30 23:57:05:037  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input5.txt
-19-05-30 23:57:05:039 ERROR Test worker Parser.CustomParser:51 - Error while convert abcd to Integer: For input string: &quot;abcd&quot; 
-19-05-30 23:57:05:042  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input1.txt
-19-05-30 23:57:05:054  INFO Test worker Parser.CustomParser:151 - Done!
-19-05-30 23:57:05:061  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input2.txt
-19-05-30 23:57:05:066  INFO Test worker Parser.CustomParser:151 - Done!
-19-05-30 23:57:05:069  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input3.txt
-19-05-30 23:57:05:073  INFO Test worker Parser.CustomParser:151 - Done!
-19-05-30 23:57:05:079  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input4.txt
-19-05-30 23:57:05:088  INFO Test worker Parser.CustomParser:151 - Done!
-19-05-30 23:57:05:095  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input5.txt
-19-05-30 23:57:05:099  INFO Test worker Parser.CustomParser:151 - Done!
+<pre>19-05-31 01:25:40:919  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input1.txt
+19-05-31 01:25:40:937 ERROR Test worker Parser.CustomParser:78 - key.value exists and not JSONObject!
+19-05-31 01:25:40:938  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input10.txt
+19-05-31 01:25:40:940 ERROR Test worker Parser.CustomParser:216 - String contains &quot;.=&quot;
+19-05-31 01:25:40:941 ERROR Test worker Parser.CustomParser:39 - String a.b.c.d.e.f.g.=12 not valid!
+19-05-31 01:25:40:941  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input2.txt
+19-05-31 01:25:40:943 ERROR Test worker Parser.CustomParser:196 - String not contains '='!
+19-05-31 01:25:40:944 ERROR Test worker Parser.CustomParser:39 - String key.badkey not valid!
+19-05-31 01:25:40:944  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input3.txt
+19-05-31 01:25:40:946 ERROR Test worker Parser.CustomParser:201 - String contains more than 1 symbol '='!
+19-05-31 01:25:40:946 ERROR Test worker Parser.CustomParser:39 - String key=1=2=3 not valid!
+19-05-31 01:25:40:947  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input4.txt
+19-05-31 01:25:40:949 ERROR Test worker Parser.CustomParser:206 - String contains &quot;..&quot;!
+19-05-31 01:25:40:949 ERROR Test worker Parser.CustomParser:39 - String key..subkey2=5 not valid!
+19-05-31 01:25:40:950  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input5.txt
+19-05-31 01:25:40:951 ERROR Test worker Parser.CustomParser:51 - Error while convert abcd to Integer: For input string: &quot;abcd&quot; 
+19-05-31 01:25:40:953  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input6.txt
+19-05-31 01:25:40:954 ERROR Test worker Parser.CustomParser:39 - String first\=12 not valid!
+19-05-31 01:25:40:955  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input7.txt
+19-05-31 01:25:40:956 ERROR Test worker Parser.CustomParser:211 - First symbol not in a-zA-Z!
+19-05-31 01:25:40:956 ERROR Test worker Parser.CustomParser:39 - String .abc=123 not valid!
+19-05-31 01:25:40:957  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input8.txt
+19-05-31 01:25:40:958 ERROR Test worker Parser.CustomParser:211 - First symbol not in a-zA-Z!
+19-05-31 01:25:40:958 ERROR Test worker Parser.CustomParser:39 - String =12 not valid!
+19-05-31 01:25:40:958  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input9.txt
+19-05-31 01:25:40:960 ERROR Test worker Parser.CustomParser:51 - Error while convert 3. to Integer: For input string: &quot;3.&quot; 
+19-05-31 01:25:40:963  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input1.txt
+19-05-31 01:25:40:969  INFO Test worker Parser.CustomParser:151 - Done!
+19-05-31 01:25:40:976  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input2.txt
+19-05-31 01:25:40:979  INFO Test worker Parser.CustomParser:151 - Done!
+19-05-31 01:25:40:983  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input3.txt
+19-05-31 01:25:40:986  INFO Test worker Parser.CustomParser:151 - Done!
+19-05-31 01:25:40:991  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input4.txt
+19-05-31 01:25:40:998  INFO Test worker Parser.CustomParser:151 - Done!
+19-05-31 01:25:41:003  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input5.txt
+19-05-31 01:25:41:007  INFO Test worker Parser.CustomParser:151 - Done!
 </pre>
 </span>
 </div>
@@ -126,7 +139,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.10</a> at 30.05.2019 23:57:05</p>
+<a href="http://www.gradle.org">Gradle 4.10</a> at 31.05.2019 1:25:41</p>
 </div>
 </div>
 </body>

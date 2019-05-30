@@ -192,7 +192,6 @@ public class CustomParser {
     }
 
     private boolean isValid(String value){
-        //TODO: check for exceptions with line('..', '!/=', etc.)
         if(value.indexOf('=') == -1){
             LOGGER.error("String not contains '='!");
             return false;
@@ -205,6 +204,16 @@ public class CustomParser {
 
         if(value.contains("..")){
             LOGGER.error("String contains \"..\"!");
+            return false;
+        }
+
+        if(value.indexOf('=') == 0 || value.indexOf('.') == 0){
+            LOGGER.error("First symbol not in a-zA-Z!");
+            return false;
+        }
+
+        if(value.contains(".=")){
+            LOGGER.error("String contains \".=\"");
             return false;
         }
 
