@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="me.herrlestrate.yandexintro.Parser.CustomParserTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-05-30T20:57:04" hostname="LAPTOP-B5PTHC6F" time="0.186">
+  <properties/>
+  <testcase name="parseTo_FileNotFound" classname="me.herrlestrate.yandexintro.Parser.CustomParserTest" time="0.125"/>
+  <testcase name="parseTo_Success" classname="me.herrlestrate.yandexintro.Parser.CustomParserTest" time="0.06"/>
+  <system-out><![CDATA[19-05-30 23:57:05:008  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input1.txt
+19-05-30 23:57:05:028 ERROR Test worker Parser.CustomParser:78 - key.value exists and not JSONObject!
+19-05-30 23:57:05:028  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input2.txt
+19-05-30 23:57:05:030 ERROR Test worker Parser.CustomParser:197 - String not contains '='!
+19-05-30 23:57:05:031 ERROR Test worker Parser.CustomParser:39 - String key.badkey not valid!
+19-05-30 23:57:05:031  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input3.txt
+19-05-30 23:57:05:033 ERROR Test worker Parser.CustomParser:202 - String contains more than 1 symbol '='!
+19-05-30 23:57:05:033 ERROR Test worker Parser.CustomParser:39 - String key=1=2=3 not valid!
+19-05-30 23:57:05:035  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input4.txt
+19-05-30 23:57:05:036 ERROR Test worker Parser.CustomParser:207 - String contains ".."!
+19-05-30 23:57:05:036 ERROR Test worker Parser.CustomParser:39 - String key..subkey2=5 not valid!
+19-05-30 23:57:05:037  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input5.txt
+19-05-30 23:57:05:039 ERROR Test worker Parser.CustomParser:51 - Error while convert abcd to Integer: For input string: "abcd" 
+19-05-30 23:57:05:042  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input1.txt
+19-05-30 23:57:05:054  INFO Test worker Parser.CustomParser:151 - Done!
+19-05-30 23:57:05:061  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input2.txt
+19-05-30 23:57:05:066  INFO Test worker Parser.CustomParser:151 - Done!
+19-05-30 23:57:05:069  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input3.txt
+19-05-30 23:57:05:073  INFO Test worker Parser.CustomParser:151 - Done!
+19-05-30 23:57:05:079  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input4.txt
+19-05-30 23:57:05:088  INFO Test worker Parser.CustomParser:151 - Done!
+19-05-30 23:57:05:095  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input5.txt
+19-05-30 23:57:05:099  INFO Test worker Parser.CustomParser:151 - Done!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

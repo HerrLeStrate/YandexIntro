@@ -1,0 +1,3 @@
+key.subkey=1
+key=2
+key..subkey2=5

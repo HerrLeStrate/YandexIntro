@@ -1,0 +1,4 @@
+key.subkey=2
+key=3
+key.subkey.subkey2=4
+key2=6

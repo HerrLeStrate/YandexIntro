@@ -1,0 +1,23 @@
+∞19-05-30 23:57:05:008  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input1.txt
+g19-05-30 23:57:05:028 ERROR Test worker Parser.CustomParser:78 - key.value exists and not JSONObject!
+∞19-05-30 23:57:05:028  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input2.txt
+\19-05-30 23:57:05:030 ERROR Test worker Parser.CustomParser:197 - String not contains '='!
+_19-05-30 23:57:05:031 ERROR Test worker Parser.CustomParser:39 - String key.badkey not valid!
+∞19-05-30 23:57:05:031  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input3.txt
+k19-05-30 23:57:05:033 ERROR Test worker Parser.CustomParser:202 - String contains more than 1 symbol '='!
+^19-05-30 23:57:05:033 ERROR Test worker Parser.CustomParser:39 - String key=1=2=3 not valid!
+∞19-05-30 23:57:05:035  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input4.txt
+Y19-05-30 23:57:05:036 ERROR Test worker Parser.CustomParser:207 - String contains ".."!
+c19-05-30 23:57:05:036 ERROR Test worker Parser.CustomParser:39 - String key..subkey2=5 not valid!
+∞19-05-30 23:57:05:037  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\FileNotFound\input5.txt
+Å19-05-30 23:57:05:039 ERROR Test worker Parser.CustomParser:51 - Error while convert abcd to Integer: For input string: "abcd" 
+±19-05-30 23:57:05:042  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input1.txt
+I19-05-30 23:57:05:054  INFO Test worker Parser.CustomParser:151 - Done!
+±19-05-30 23:57:05:061  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input2.txt
+I19-05-30 23:57:05:066  INFO Test worker Parser.CustomParser:151 - Done!
+±19-05-30 23:57:05:069  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input3.txt
+I19-05-30 23:57:05:073  INFO Test worker Parser.CustomParser:151 - Done!
+±19-05-30 23:57:05:079  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input4.txt
+I19-05-30 23:57:05:088  INFO Test worker Parser.CustomParser:151 - Done!
+±19-05-30 23:57:05:095  INFO Test worker Parser.CustomParser:20 - CustomParser initialized with input: F:\IdeaProjects\YandexIntro\build\resources\test\Success_Input\input5.txt
+I19-05-30 23:57:05:099  INFO Test worker Parser.CustomParser:151 - Done!

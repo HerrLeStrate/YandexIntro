@@ -1,0 +1,10 @@
+{
+  "key": {
+    "value": {
+      "value": 2,
+      "extra": {
+        "value": 666
+      }
+    }
+  }
+}
