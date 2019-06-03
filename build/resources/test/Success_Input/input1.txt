@@ -1,3 +1,0 @@
-key=3
-key.subkey=4
-tron=0

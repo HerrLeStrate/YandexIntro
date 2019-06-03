@@ -1,7 +1,5 @@
 package me.herrlestrate.yandexintro.Parser;
 
-import me.herrlestrate.yandexintro.Main;
-import netscape.javascript.JSObject;
 import org.json.JSONObject;
 import org.junit.After;
 import org.junit.Before;
@@ -9,15 +7,12 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.Scanner;
 
 import static org.junit.Assert.*;
 
 public class CustomParserTest {
-
-    private CustomParser customParser;
 
     @Before
     public void setUp() throws Exception {
@@ -98,9 +93,7 @@ public class CustomParserTest {
 
         while(scanner.hasNextLine()){
             String s = scanner.nextLine()
-                    .replace(" ","")
-                    .replace("\n", "")
-                    .replace("\r", "").toLowerCase();
+                    .toLowerCase();
             sbAnswer.append(s);
         }
 
@@ -113,9 +106,7 @@ public class CustomParserTest {
 
         while(scanner.hasNextLine()){
             String s = scanner.nextLine()
-                    .replace(" ","")
-                    .replace("\n", "")
-                    .replace("\r", "").toLowerCase();
+                    .toLowerCase();
             sbResult.append(s);
         }
 

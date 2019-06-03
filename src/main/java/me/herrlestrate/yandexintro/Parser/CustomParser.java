@@ -155,40 +155,7 @@ public class CustomParser {
     }
 
     private String toJsonFormat(JSONObject object){
-        StringBuilder result = new StringBuilder();
-        StringBuilder empty = new StringBuilder();
-        int count = 4;
-        String s = object.toString();
-        for(int i = 0; i < s.length(); i++){
-            char c = s.charAt(i);
-            if(c == '{') {
-                for (int j = 0; j < count; j++)
-                    empty.append(" ");
-                result.append("{\n");
-                result.append(empty);
-                continue;
-            }
-            if(c == '}'){
-                empty.delete(empty.length()-count,empty.length());
-                result.append("\n");
-                result.append(empty);
-                result.append("}");
-                continue;
-            }
-            if(c == ':'){
-                result.append(":");
-                result.append(" ");
-                continue;
-            }
-            if(c == ','){
-                result.append(",\n");
-                result.append(empty);
-                continue;
-            }
-            result.append(c);
-
-        }
-        return result.toString();
+        return object.toString();
     }
 
     private boolean isValid(String value){

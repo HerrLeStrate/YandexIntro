@@ -1,3 +1,0 @@
-key=1
-key.subkey=2
-key.badkey

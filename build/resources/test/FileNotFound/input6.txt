@@ -1,3 +1,0 @@
-first.second=3
-first=4
-first\=12

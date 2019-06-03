@@ -1,2 +1,0 @@
-key.value=2
-key.value.extra=666
