@@ -1,9 +1,12 @@
 package me.herrlestrate.yandexintro.Parser;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,6 +16,8 @@ import java.util.Scanner;
 import static org.junit.Assert.*;
 
 public class CustomParserTest {
+
+    private static Logger LOGGER = LoggerFactory.getLogger(CustomParserTest.class);
 
     @Before
     public void setUp() throws Exception {
@@ -32,15 +37,19 @@ public class CustomParserTest {
         CustomParser customParser;
         for(int i = 0; i < files.length; i++){
             customParser = new CustomParser(files[i].getAbsolutePath());
-            customParser.parseTo("test-output.json");
             File file = new File("test-output.json");
+            if(file.exists() && !file.delete()){
+                LOGGER.error("Cannot delete test-output.json!");
+            }
+            customParser.parseTo("test-output.json");
+
             if(file.exists()){
                 fail("[FileNotFound] File exists, but it is error! Test " + (i+1));
                 if(!file.delete()){
-                    System.err.println("Error while delete file!");
+                    LOGGER.error("Error while delete file!");
                 }
             } else {
-                assertTrue("[FileNotFound] #" + (i+1) + " Ok!",true);
+                assertTrue(true);
             }
         }
     }
@@ -58,14 +67,14 @@ public class CustomParserTest {
         CustomParser customParser;
         for(int i = 0;i < files.length; i++){
             if(!output[i].exists()){
-                System.err.println("For test " + (i+1) + " answer-output not founded!");
+                LOGGER.error("For test " + (i+1) + " answer-output not founded!");
                 continue;
             }
             customParser = new CustomParser(files[i].getAbsolutePath());
             File jOutput = new File("test-output.json");
             try {
                 if (jOutput.exists() && !jOutput.delete()) {
-                    System.err.println("Some errors with test-output.json");
+                    LOGGER.error("Some errors with test-output.json");
                     fail("Cannot delete test-output.json");
                 }
             }catch(SecurityException ex){
@@ -73,9 +82,12 @@ public class CustomParserTest {
             }
             customParser.parseTo("test-output.json");
             boolean result = compare(output[i], jOutput);
-            assertTrue(result);
+
             if (jOutput.exists() && !jOutput.delete()) {
             }
+
+            assertTrue("Exception at test: " + (i+1), result);
+
         }
     }
 
@@ -87,7 +99,7 @@ public class CustomParserTest {
         try {
             scanner = new Scanner(answer);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error("Answer file not Found!", e);
             return false;
         }
 
@@ -100,7 +112,7 @@ public class CustomParserTest {
         try {
             scanner = new Scanner(result);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error("Result file not Found!", e);
             return false;
         }
 
@@ -112,7 +124,17 @@ public class CustomParserTest {
 
         scanner.close();
 
-        return isJSONObjectEquals(new JSONObject(sbAnswer.toString()),new JSONObject(sbResult.toString()));
+        LOGGER.debug("Answer string: " + sbAnswer.toString());
+        LOGGER.debug("Result string: " + sbResult.toString());
+
+        try {
+            JSONObject a = new JSONObject(sbAnswer.toString());
+            JSONObject b = new JSONObject(sbResult.toString());
+            return isJSONObjectEquals(a, b);
+        } catch(JSONException exception){
+            LOGGER.error("Exception at parse JSONObject ", exception);
+            return false;
+        }
     }
 
     /**
