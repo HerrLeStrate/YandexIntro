@@ -66,11 +66,13 @@ public class CustomParserTest {
         File[] output = getResourceFolderFiles("Success_Output");
         CustomParser customParser;
         for(int i = 0;i < files.length; i++){
-            if(!output[i].exists()){
+            File inputTest = getFile(files, "input" + (i+1) + ".txt");
+            File outputTest = getFile(output, "output" + (i+1) + ".txt");
+            if(outputTest == null || !outputTest.exists()){
                 LOGGER.error("For test " + (i+1) + " answer-output not founded!");
                 continue;
             }
-            customParser = new CustomParser(files[i].getAbsolutePath());
+            customParser = new CustomParser(inputTest.getAbsolutePath());
             File jOutput = new File("test-output.json");
             try {
                 if (jOutput.exists() && !jOutput.delete()) {
@@ -81,7 +83,7 @@ public class CustomParserTest {
                 ex.printStackTrace();
             }
             customParser.parseTo("test-output.json");
-            boolean result = compare(output[i], jOutput);
+            boolean result = compare(outputTest, jOutput);
 
             if (jOutput.exists() && !jOutput.delete()) {
             }
@@ -89,6 +91,14 @@ public class CustomParserTest {
             assertTrue("Exception at test: " + (i+1), result);
 
         }
+    }
+
+    private File getFile(File[] files, String name){
+        for(int i = 0;i < files.length; i++) {
+            if (files[i].getName().equalsIgnoreCase(name))
+                return files[i];
+        }
+        return null;
     }
 
     private boolean compare(File answer, File result){
@@ -130,7 +140,9 @@ public class CustomParserTest {
         try {
             JSONObject a = new JSONObject(sbAnswer.toString());
             JSONObject b = new JSONObject(sbResult.toString());
-            return isJSONObjectEquals(a, b);
+            boolean bool = isJSONObjectEquals(a, b);
+            LOGGER.debug("Result for compare (a, b) is " + bool);
+            return bool;
         } catch(JSONException exception){
             LOGGER.error("Exception at parse JSONObject ", exception);
             return false;
